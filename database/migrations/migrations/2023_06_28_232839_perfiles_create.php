@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('equipos', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('perfiles', function (Blueprint $table) {
+            $table->integer('id')->autoincrement(); //PK
+            $table->string('nombre',20);
         });
     }
 
@@ -21,8 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('equipos', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-        });
+        Schema::dropIfExists('perfiles');
     }
 };

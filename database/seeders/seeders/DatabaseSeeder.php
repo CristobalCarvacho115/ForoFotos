@@ -13,12 +13,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            EquiposSeeder::class,
-            JugadoresSeeder::class,
-            PartidosSeeder::class,
-            EquiposPartidosSeeder::class,
-            RolesSeeder::class,
-            UsuariosSeeder::class,
+            CuentasSeeder::class,
+            //ImagenesSeeder::class,
+            PerfilesSeeder::class
         ]);
     }
 }

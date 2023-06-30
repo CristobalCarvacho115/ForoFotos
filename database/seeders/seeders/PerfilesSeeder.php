@@ -4,18 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class RolesSeeder extends Seeder
+class PerfilesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('roles')->insert([
-            ['nombre' => 'Administrador',],           
-            ['nombre' => 'Presidente Club',],
+        DB::table('perfiles')->insert([
+            ['nombre' => 'Administrador'],
+            ['nombre' => 'Artista']
         ]);
     }
 }
